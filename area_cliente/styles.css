@@ -1,0 +1,35 @@
+/* Estilizando o corpo da página */
+body {
+    font-family: 'Arial', sans-serif; /* Define a fonte padrão para Arial, com fallback para sans-serif */
+    background-color: #101820; /* Define a cor de fundo */
+    color: #ffffff; /* Define a cor do texto */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimentos padrão */
+    display: flex; /* Define o layout como flexível */
+    flex-direction: column; /* Define a direção dos itens como coluna */
+    align-items: center; /* Centraliza os itens no eixo horizontal */
+    justify-content: center; /* Centraliza os itens no eixo vertical */
+    height: 100vh; /* Define a altura como 100% da viewport */
+}
+
+/* Estilizando o conteúdo da Área do Cliente */
+div {
+    background: #282c34; /* Define a cor de fundo */
+    padding: 40px; /* Define o preenchimento */
+    border-radius: 8px; /* Define bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+    text-align: center; /* Centraliza o texto */
+    width: 100%; /* Define a largura como total */
+    max-width: 600px; /* Define a largura máxima */
+}
+
+h2 {
+    font-size: 2rem; /* Define o tamanho da fonte */
+    margin-bottom: 20px; /* Define a margem inferior */
+}
+
+p {
+    font-size: 1.2rem; /* Define o tamanho da fonte */
+    line-height: 1.5; /* Define a altura da linha */
+    color: #cbd5e0; /* Define a cor do texto */
+}
