@@ -67,10 +67,9 @@ nav a {
 nav a:hover {
     color: #3498db;
 }
-
 /* Menu de Hambúrguer */
 .menu-toggle {
-    display: none; /* Escondido por padrão */
+    display: none; /* Escondido por padrão em telas grandes */
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
@@ -83,14 +82,27 @@ nav a:hover {
     transition: all 0.3s ease;
 }
 
+/* Animação do menu hamburguer para "X" */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
 /* Responsividade para dispositivos móveis */
 @media (max-width: 768px) {
     .menu-toggle {
-        display: flex; /* Mostrar o menu de hambúrguer em telas menores */
+        display: flex; /* Mostrar o menu hamburguer em telas menores */
     }
 
     nav ul {
-        display: none; /* Esconder os links em telas menores */
+        display: none; /* Esconder o menu por padrão em telas menores */
         flex-direction: column;
         background: #fff;
         position: absolute;
@@ -102,7 +114,7 @@ nav a:hover {
     }
 
     nav ul.active {
-        display: flex; /* Mostrar os links quando o menu estiver ativo */
+        display: flex; /* Mostrar o menu quando a classe active for adicionada */
     }
 
     nav a {
