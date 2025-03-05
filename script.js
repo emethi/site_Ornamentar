@@ -37,3 +37,23 @@ window.onload = function() {
 window.onbeforeunload = function() {
     window.scrollTo(0, 0);
 };
+// Menu Hamburguer
+const menuToggle = document.querySelector('.menu-toggle');
+const navUl = document.querySelector('nav ul');
+
+menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    navUl.classList.toggle('active');
+});
+
+// Fechar menu ao clicar em um link
+const navLinks = document.querySelectorAll('nav a');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+            menuToggle.classList.remove('active');
+            navUl.classList.remove('active');
+        }
+    });
+});
